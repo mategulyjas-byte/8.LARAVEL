@@ -12,3 +12,11 @@ Route::get('/rolunk', function () {
     return view('rolunk');
 });
 
+Route::get('/info', function () {
+    return view('info');
+});
+
+
+Route::get('/teszt1', [App\Http\Controllers\TesztController::class, 'koszontes'] 
+    
+);
