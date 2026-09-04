@@ -9,7 +9,11 @@ Route::get('/', function () {
 
 
 Route::get('/rolunk', function () {
-    return view('rolunk');
+
+    $emberek = DB::table('gyakorlas3')->get();
+
+    return view('rolunk', ['emberek' => $emberek]);
+
 });
 
 Route::get('/info', function () {
