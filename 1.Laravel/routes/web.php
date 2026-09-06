@@ -16,6 +16,18 @@ Route::get('/rolunk', function () {
 
 });
 
+Route::get('/users', function () {
+
+    $emberek = DB::table('_gyak4')->get();
+
+    return view('users', ['emberek' => $emberek]);
+
+});
+
+
+
+
+
 Route::get('/info', function () {
     return view('info');
 });
