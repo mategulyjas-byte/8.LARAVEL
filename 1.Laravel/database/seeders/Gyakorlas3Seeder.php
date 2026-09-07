@@ -18,7 +18,7 @@ class Gyakorlas3Seeder extends Seeder
             ['nev'=>'Kati', 'ev'=>40, 'telepules'=>'Kalocsa', "email"=>"mate@mate.hu"],
             ['nev'=>'Gergo', 'ev'=>4,  'telepules'=>'Kalocsa',"email"=>"mate@mate.hu"],
             ['nev'=>'Bence', 'ev'=>42, 'telepules'=>'Kalocsa', "email"=>"mate@mate.hu"],
-            ['nev'=>'Angéla', 'ev'=>30, 'telepules'=>'Kalocsa', "email"=>"mate@mate.hu"]
+            ['nev'=>'Angéla', 'ev'=>30, 'telepules'=>'Kalocsa', "email"=>"mate@mate.hu"],
         ]);
     }
 }

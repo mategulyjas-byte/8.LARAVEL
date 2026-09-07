@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Telepules extends Model
+{
+protected $table="telepulesek";
+
+protected $fillable =["city", "population", "bigcity"];
+}
