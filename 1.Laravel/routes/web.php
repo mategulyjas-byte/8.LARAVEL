@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
+
+use App\Http\Controllers\AnimalController; 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 
 Route::get('/rolunk', function () {
 
@@ -68,3 +70,11 @@ Route::get('/info', function () {
 Route::get('/teszt1', [App\Http\Controllers\TesztController::class, 'koszontes'] 
     
 );
+
+Route::get('/animals', [AnimalController::class, 'allatok'])->name('allatok.allatok');
+
+
+Route::post('/animals/mentes', [AnimalController::class, 'store'])->name('allatok.store');
+
+
+Route::delete('/animals/torles/{id}', [AnimalController::class, 'destroy']);
