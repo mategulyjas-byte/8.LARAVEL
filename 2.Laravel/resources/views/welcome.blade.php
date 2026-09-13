@@ -93,6 +93,34 @@ print htmlentities($title3)
 @endforeach
 
 
+<h2>{{$cím}}<h3>
+
+
+
+
+
+
+    <h2>Regisztráció</h2>
+{{-- {{csrf_token()}} --}}
+    <form action="" method="post">
+
+@csrf
+{{--  cros site request forgery--}}
+<input type="text" name="name"  placeholder="írd ide a neved">
+<br>
+<input type="email" name="email"  placeholder="add meg az email címed">
+
+{{-- <input type="hidden" name="_token" value="{{csrf_token()}}"> --}}
+<button>Küldés</button>
+
+
+    </form>
+
+
+
+
+
+
 
 
 </body>
