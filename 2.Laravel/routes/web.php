@@ -4,14 +4,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-//$list = file_get_contents("https://jsonplaceholder.typicode.com/users");
-//print_r ($list);
 
-//$list = file_get_contents("https://jsonplaceholder.typicode.com/users");
-//dd($list);
+// $list = file_get_contents("https://jsonplaceholder.typicode.com/users");
+// print_r ($list);});
+
+// $list = file_get_contents("https://jsonplaceholder.typicode.com/users");
+// dd($list);});
 
 // $list = json_decode(file_get_contents("https://jsonplaceholder.typicode.com/users"));
-// dd($list);
+// dd($list);});
 
 
 
@@ -34,20 +35,32 @@ Route::get('/', function () {
 // $list = json_decode(file_get_contents("https://jsonplaceholder.typicode.com/users"));
 
 // $első="Elsőváltozó";
-// $második="Másodikváltozó"
+// $második="Másodikváltozó";
 
 
-//     return view('welcome', ["listaablédnek"=>$list, "cím"=>"JSONplaceholderek", "első"=>$első, "második=>$második"]);
+//     return view('welcome', ["listaablédnek"=>$list, "cím"=>"JSONplaceholderek", 
+//     "első"=>$első, "második"=>$második]);
 // });
 
-$list = json_decode(file_get_contents("https://jsonplaceholder.typicode.com/users"));
+
+
+
+
+
+
+
+
+
+
+//$list = json_decode(file_get_contents("https://jsonplaceholder.typicode.com/users"));
+
+
 
 
 $listaablédnek = json_decode(file_get_contents("https://jsonplaceholder.typicode.com/users"));
 $cím= "JSONplaceholderek";
 $első="Elsőváltozó";
 $második="Másodikváltozó";
-
 
     return view('welcome', compact("listaablédnek","cím","első","második") );
 });
@@ -62,6 +75,9 @@ Route::post('/',function(){
 dd($_POST);
 
 });
+
+
+
 
 
 

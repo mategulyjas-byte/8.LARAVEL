@@ -11,33 +11,30 @@
 
 
 <?php
-
 print date("Y-m-d H:i:s");
 print "<br>";
 print date("Y-m-d H:i:s", strtotime("-1 day"));
 print "<br>";
-
-
+print "<hr>";
 ?>
 
-@php
-    
+@php    
 print date("Y-m-d H:i:s");
 print "<br>";
 print date("Y-m-d H:i:s", strtotime("-1 day"));
 print "<br>";
-
-
-
+print "<hr>"
 
 @endphp
-
 
 {{date("Y-m-d H:i:s")}}
 <br>
 {{ date("Y-m-d H:i:s", strtotime("-1 day"))}}
 
+@php
 
+    print "<br> <hr>";
+@endphp
 
 @for ($i = 0; $i <3; $i++)
     {{$i}}<hr>
@@ -54,34 +51,25 @@ print "<br>";
 
  @php
      $title= '<h1> Helló </h1>';
-
-
  @endphp
-
 {{$title}}
-
 <br>
-
+<br>
  @php
      $title2= '<h1> vírus() </h1>';
-
  @endphp
-
 {{$title2}}
-
 <br>
 
  @php
      $title2= '<h1> Nem vírus</h1>';
-
  @endphp
-
 {!! $title2 !!}
  <br>
 
  <?php 
       $title3= '<h1> sima HTML</h1>';
-print htmlentities($title3)
+print htmlentities($title3)."<br><br>";
  
  ?>
 
@@ -95,13 +83,19 @@ print htmlentities($title3)
 
 <h2>{{$cím}}<h3>
 
+<h2>{{$első}}</h2>
+<h2>{{$második}}</h2>
 
 
 
 
 
     <h2>Regisztráció</h2>
+
+
 {{-- {{csrf_token()}} --}}
+
+
     <form action="" method="post">
 
 @csrf
@@ -111,6 +105,7 @@ print htmlentities($title3)
 <input type="email" name="email"  placeholder="add meg az email címed">
 
 {{-- <input type="hidden" name="_token" value="{{csrf_token()}}"> --}}
+
 <button>Küldés</button>
 
 
