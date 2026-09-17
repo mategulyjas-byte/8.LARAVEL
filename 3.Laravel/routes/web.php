@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -15,20 +16,39 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/a', function (Request $request) { 
-$request->session()->put("kulcs", "érték");
+
+// Route::get('/a', function (Request $request) { 
+
+// $request->user()->name;
+
+// Auth::user()->name;
+
+// Auth::logout();  
+
+// });
+
+
+
+
+
+// Route::get('/a', function (Request $request) { 
+// $request->session()->put("kulcs", "érték");
    
-});
+// });
 
-Route::get('/b', function (Request $request) {   
-dump($request->session()->get("kulcs"));
-});
+// Route::get('/b', function (Request $request) {   
+// dump($request->session()->get("kulcs"));
+// });
 
 
-Route::get('/c', function (Request $request) {  
-dump($request->session()->forget("kulcs"));
+// Route::get('/c', function (Request $request) {  
+// dump($request->session()->forget("kulcs"));
     
-});
+// });
+
+
+// post, get session, cookies, auth user
+
 
 
 
@@ -46,10 +66,32 @@ dump($request->session()->forget("kulcs"));
 // ;});
 
 
-Route::post("/", function(Request $request ){ 
+Route::get("/", function(){ return view("welcome");});
+
+
+
+
+Route::post("/", function(Request $request){ 
     
-dump($request->valami);
+$request->validate([
 
-dump($_POST);
+    "name"=> "required|min:3|max:70",
+    
+    "email"=> "required|email"
+]);
 
-;});
+dump($request->all());});
+
+
+
+// Route::post("/", function(Request $request ){ 
+    
+// dump($request->valami);
+
+// dump($_POST);
+
+// ;});
+
+
+
+    //  unique:users, email"

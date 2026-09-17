@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+
+
+
 </head>
 <body>
     
@@ -19,13 +23,17 @@
 
 @csrf
 <input type="text" name="name" id="" placeholder="Add meg a neved">
-
-<br>
+@error('name')
+<div>{{$message}}</div>
+    
+@enderror
 <br>
 
 <input type="text" name="email" placeholder="Add meg az e-mail címed">
-
-<br>
+@error('email')
+<div>{{$message}}</div>
+    
+@enderror
 <br>
 
 <button>Küldés</button>
