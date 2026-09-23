@@ -16,9 +16,6 @@ class GuestController extends Controller
         return view("register");
     }
 
-
-
-
     function registerprocess(Request $request)
     {
        $validated= $request->validate([
@@ -27,10 +24,21 @@ class GuestController extends Controller
             "password"=>"required|min:1|max:20|confirmed"
         ]);
 
-print_r ($validated);
+//print_r ($validated);
 
         User::create($validated);
 
-        dump($request->all());
+
+       // $request->session()->flash("success", __("It's okay"));
+
+      // ez vagy a back  return redirect()->to("/");
+
+       // return redirect()->back();
+
+//vagy rövídítve a with
+
+return redirect()->back()->with("success", __("OK"));
+
+
     }
 } 

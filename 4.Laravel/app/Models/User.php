@@ -49,7 +49,7 @@ class User extends Authenticatable
 
 
 //mutátor
-function setPasswordAttribute($password){
+public function setPasswordAttribute($password){
 
 $this->attributes["password"]= password_hash($password, PASSWORD_DEFAULT);
 }

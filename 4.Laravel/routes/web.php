@@ -11,6 +11,6 @@ Route::get("/", [GuestController::class, "registerview"]);
 
 
 
-Route::post("/", [GuestController::class,"registerprocess"])
-;
+Route::post("/", [GuestController::class,"registerprocess"]);
+
 

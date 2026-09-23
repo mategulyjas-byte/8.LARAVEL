@@ -12,8 +12,11 @@
 </head>
 <body>
     
+@if (Session::has("success"))
+    <li>{{Session::get("success")}}</li>
 
-
+    
+@endif
 
 <div>Regisztrációs Űrlap</div>
 <br>
