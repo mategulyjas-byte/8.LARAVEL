@@ -4,19 +4,50 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GuestController extends Controller
 {
     //
 
 
-    function registerview()
+    function registerView()
 
     {
-        return view("register");
+        return view("/register");
     }
 
-    function registerprocess(Request $request)
+  function loginView()
+
+    {
+        return view("/login");
+    }
+
+
+
+
+
+
+    
+function loginProcess(Request $request){
+$loginresult= Auth::attempt(["email"=>$request->email, "password"=>$request->password ], $request->remember)    
+;
+if ($loginresult) {
+    return redirect()->to('/profile');
+}
+else{return redirect()->back()->with("error",__("Failled"));};
+
+
+
+
+}
+
+
+
+
+
+
+    function registerProcess(Request $request)
     {
        $validated= $request->validate([
             "name" => "required|min:3|max:30",
