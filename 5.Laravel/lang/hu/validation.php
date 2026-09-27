@@ -34,7 +34,7 @@ return [
     ],
     'boolean' => 'The :attribute field must be true or false.',
     'can' => 'The :attribute field contains an unauthorized value.',
-    'confirmed' => 'The :attribute field confirmation does not match.',
+    'confirmed' => ':attribute nem egyezik .',
     'contains' => 'The :attribute field is missing a required value.',
     'current_password' => 'The password is incorrect.',
     'date' => 'The :attribute field must be a valid date.',
@@ -100,7 +100,7 @@ return [
         'array' => 'The :attribute field must not have more than :max items.',
         'file' => 'The :attribute field must not be greater than :max kilobytes.',
         'numeric' => 'The :attribute field must not be greater than :max.',
-        'string' => 'The :attribute field must not be greater than :max characters.',
+        'string' => ':attribute hossza maximum :max karakter lehet.',
     ],
     'max_digits' => 'The :attribute field must not have more than :max digits.',
     'mimes' => 'The :attribute field must be a file of type: :values.',
@@ -109,7 +109,7 @@ return [
         'array' => 'The :attribute field must have at least :min items.',
         'file' => 'The :attribute field must be at least :min kilobytes.',
         'numeric' => 'The :attribute field must be at least :min.',
-        'string' => 'The :attribute field must be at least :min characters.',
+        'string' => 'The :attribute fhosszának legalább :min karakternek kell lennie.',
     ],
     'min_digits' => 'The :attribute field must have at least :min digits.',
     'missing' => 'The :attribute field must be missing.',
@@ -140,7 +140,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute field format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => ':attribute mező kitöltése kötelező.',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_if_accepted' => 'The :attribute field is required when :other is accepted.',
@@ -195,6 +195,6 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [ "name"=> "A név", "email"=> "Az e-mail", "password"=>"A jelszó" ],
 
 ];
