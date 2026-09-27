@@ -13,6 +13,7 @@ class RegisterController extends Controller
     }
 
 
+    
 function registerProcess(Request $request){
     $validated=$request->validate([
     "name"=>"required|min:1|max:60",
