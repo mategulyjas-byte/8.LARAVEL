@@ -17,7 +17,7 @@
 
 @csrf
 
-<label for="name">{{"Please enter your name"}}</label>
+<label for="name">{{__("Please enter your name")}}</label>
 <br>
 <input type="text" name="name" id=" name" value="{{old("name")}}">
 <br>
@@ -28,7 +28,7 @@
 <br>
 
 
-<label for="email">{{"Please enter your email address"}}</label>
+<label for="email">{{__("Please enter your email address")}}</label>
 <br>
 <input type="email" name="email" id=" email" value="{{old("email")}}">
 <br>
@@ -38,7 +38,7 @@
 
 
 <br>
-<label for="password">{{"Please enter your password "}}</label>
+<label for="password">{{__("Please enter your password")}}</label>
 <br>
 <input type="password" name="password" id="password" >
 <br>
@@ -47,7 +47,7 @@
 @enderror
 
 <br>
-<label for="password_confirmation">{{"Please confirm your password "}}</label>
+<label for="password_confirmation">{{__("Please confirm your password")}}</label>
 <br>
 <input type="password" name="password_confirmation" id="password_confirmation" >
 
