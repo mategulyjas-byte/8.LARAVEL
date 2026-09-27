@@ -34,14 +34,14 @@
 
 <input type="checkbox" name="remember"> {{__("Note")}}
 
-
+<br>
 <button>  {{__("Send")}}</button>
-
 
 </form>
 
 
-
+<br>
+<button><a href="/">{{__("Go to Introduction Page")}}</a></button>
 
 
 

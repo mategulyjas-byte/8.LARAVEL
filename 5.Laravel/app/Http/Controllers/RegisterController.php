@@ -15,6 +15,10 @@ class RegisterController extends Controller
 
     
 function registerProcess(Request $request){
+
+
+      
+
     $validated=$request->validate([
     "name"=>"required|min:1|max:60",
     "email"=>"required|email",
@@ -25,8 +29,11 @@ function registerProcess(Request $request){
 
         Auth::login($user);
 
-     return    redirect()->to("/profile");
-        
+     return    redirect()->to("/profile");}
+      
 
-    }}
+     }
+
+
+    
 

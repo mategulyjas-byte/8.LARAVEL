@@ -8,7 +8,10 @@
 </head>
 <body>
     
-
+@if ($errors->any())
+{{__("Unsuccessful registration")}}
+    
+@endif
 
 <div>{{__("Registration")}}</div>
 <br>
@@ -19,7 +22,7 @@
 
 <label for="name">{{__("Please enter your name")}}</label>
 <br>
-<input type="text" name="name" id=" name" value="{{old("name")}}">
+<input type="text" name="name" id="name" value="{{old("name")}}">
 <br>
 @error('name')
     <div>{{$message}}</div>
@@ -30,7 +33,7 @@
 
 <label for="email">{{__("Please enter your email address")}}</label>
 <br>
-<input type="email" name="email" id=" email" value="{{old("email")}}">
+<input type="email" name="email" id="email" value="{{old("email")}}">
 <br>
 @error('email')
     <div>{{$message}}</div>

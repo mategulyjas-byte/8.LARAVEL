@@ -20,7 +20,7 @@
 
 <button><a href="/register"> {{__("Go to Registration Page")}}</a></button>
 <br>
-
+<br>
 <button><a href="/login"> {{__("Go to Login Page")}}</a></button>
 
 
