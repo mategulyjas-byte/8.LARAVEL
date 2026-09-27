@@ -1,0 +1,20 @@
+{ "Introduction": "Bemutatkozás", 
+"The Shoe shop": "A cipőbolt",
+
+"Go to Registration Page": "Tovább a regisztrációs odlalra",
+ "Registration":"Regisztrációs űrlap",
+  "Please enter your name": " Kérjük adja meg a nevét",
+"Please enter your email address": "Kérjük adja meg az -email címét",
+"Please enter your password": "Kérem adja meg a jelszavát",
+"Please confirm your password": "Kérem erősítse meg  jelszavát",
+"Send":"Küldés",
+"Go to Introduction Page": "Tovább bemutatkozó oldalra",
+"Go to Login Page": "Tovább a bejelentkezéshez",
+"Login form": "Belépési űrlap",
+"Unsuccessful login, incorrect login details": "Siekertelen belépési kísérlet, hibás belépési adatok ",
+"Profile": "Profilom",
+"Welcome" : "Üdvözöllek",
+"My data":"Adataim",
+"E-mail": "Email",
+"Note":"Megjegyez"
+}
