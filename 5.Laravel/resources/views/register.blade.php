@@ -54,14 +54,14 @@
 <br>
 <input type="password" name="password_confirmation" id="password_confirmation" >
 
-
+<br>
 <br>
 
 <button> {{__("Send")}}</button>
 
 </form>
 
-
+<br>
 <button><a href="/">{{__("Go to Introduction Page")}}</a></button>
 
 </body>

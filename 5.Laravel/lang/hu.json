@@ -17,5 +17,7 @@
 "My data":"Adataim",
 "E-mail": "Email",
 "Note":"Megjegyez",
-"Unsuccessful registration": "Sikertelen regisztráció"
+"Unsuccessful registration": "Sikertelen regisztráció",
+"Exit":"Kilépés",
+"Successful logout":"Sikeres kilépés"
 }

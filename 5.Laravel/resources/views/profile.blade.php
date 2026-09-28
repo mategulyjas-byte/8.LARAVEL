@@ -9,15 +9,15 @@
 <body>
     
     <div>{{__("Profile")}}</div>
-
+<br>
 
 <div>  {{ __("Welcome") ." ". $userdata["name"]}} </div>
 <br>
 
-<div> {{__("My data:")}}</div>
+<div> {{__("My data")}}:</div>
 <div>{{__("E-mail")." ". $userdata["email"]}}</div>
 
-
+<br>
 
 
 <form action="/logout" method="POST">

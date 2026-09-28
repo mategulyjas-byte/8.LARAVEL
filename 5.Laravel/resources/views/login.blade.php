@@ -14,6 +14,14 @@
 
     
 @endif
+
+@if (Session::has("success"))
+{{session::get("success")}}
+    
+@endif
+
+
+
 <br>
 
 {{__("Login form")}}
