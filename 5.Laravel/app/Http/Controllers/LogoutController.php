@@ -13,4 +13,7 @@ class LogoutController extends Controller
     return redirect()->to("/login")->with("success",__("Successful logout"));
 
     }
+
+
+    function getlogout(){return redirect()->to("/");}
 }

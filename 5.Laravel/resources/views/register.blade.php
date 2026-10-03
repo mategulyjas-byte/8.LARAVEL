@@ -8,6 +8,9 @@
 </head>
 <body>
     
+
+{{--  --}}
+
 @if ($errors->any())
 {{__("Unsuccessful registration")}}
     

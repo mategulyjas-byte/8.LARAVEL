@@ -24,5 +24,11 @@
 <button><a href="/login"> {{__("Go to Login Page")}}</a></button>
 
 
+{{-- erros --}}
+
+
+
 </body>
 </html>
+
+
