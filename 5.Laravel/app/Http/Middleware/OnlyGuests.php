@@ -18,7 +18,7 @@ class OnlyGuests
     public function handle(Request $request, Closure $next): Response
     {
 if (Auth::check()) {
-    return redirect()->to("profile");
+    return redirect()->to("profile")->with("error",__("Log out of your profile first"));
 }
 
         return $next($request);

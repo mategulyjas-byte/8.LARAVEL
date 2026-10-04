@@ -9,7 +9,11 @@
 <body>
     
 
-{{--  --}}
+@if (Session::has("error"))
+   {{ Session::get("error")}}
+
+    
+@endif
 
 @if ($errors->any())
 {{__("Unsuccessful registration")}}

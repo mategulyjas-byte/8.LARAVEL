@@ -19,5 +19,7 @@
 "Note":"Megjegyez",
 "Unsuccessful registration": "Sikertelen regisztráció",
 "Exit":"Kilépés",
-"Successful logout":"Sikeres kilépés"
+"Successful logout":"Sikeres kilépés",
+"Log in first":"Előbb jelentkezz be",
+"Log out of your profile first": "Előbb jelentkezz ki"
 }

@@ -8,6 +8,14 @@
 </head>
 <body>
     
+@if (Session::has("error"))
+   {{ Session::get("error")}}
+
+    
+@endif
+
+
+
     <div>{{__("Profile")}}</div>
 <br>
 
