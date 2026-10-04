@@ -21,5 +21,6 @@
 "Exit":"Kilépés",
 "Successful logout":"Sikeres kilépés",
 "Log in first":"Előbb jelentkezz be",
-"Log out of your profile first": "Előbb jelentkezz ki"
+"Log out of your profile first": "Előbb jelentkezz ki",
+"The provided address did not exist": "A megadott cím nem létezett"
 }

@@ -10,7 +10,10 @@
 
 <body>
 
-
+@if (Session::has("error"))
+    {{Session::get("error")}}
+    
+@endif
 
 
     <h1> {{__("The Shoe shop") }}</h1>
@@ -30,6 +33,9 @@
 
 {{-- erros --}}
 
+
+<a href="/hu">HU</a>
+<a href="/en">ENG</a>
 
 
 </body>

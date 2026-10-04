@@ -14,6 +14,5 @@ class LogoutController extends Controller
 
     }
 
-
-    function getlogout(){return redirect()->to("/");}
+    function getlogout(){return redirect()->to("/login");}
 }
