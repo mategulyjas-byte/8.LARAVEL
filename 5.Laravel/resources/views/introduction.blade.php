@@ -19,6 +19,7 @@
     <h1> {{__("The Shoe shop") }}</h1>
 
 <h2">{{__("Introduction")  }} </h2>
+
     
 
 

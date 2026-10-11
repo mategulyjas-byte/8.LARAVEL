@@ -27,3 +27,4 @@ if (Session::has("langkey")) {
         return $next($request);
     }
 }
+

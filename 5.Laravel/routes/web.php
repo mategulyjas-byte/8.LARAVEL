@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Middleware\EmailRegister;
 use App\Http\Middleware\OnlyForUsers;
 use App\Http\Middleware\OnlyForGuests;
 use App\Http\Middleware\OnlyLogoutUsers;
@@ -18,12 +19,17 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\LangueageController;
 
 
+Route::get('/emailRegister/{token}',[RegisterController::class,"emailRegister"]);
+
 
 Route::middleware([SetLanguage::class])->group(function(){
 
 Route::get("/{lang}", [LanguageController::class,"language"])->where("lang","hu|en");
 
 Route::middleware([SetLanguage::class])->group(function(){
+
+
+
 
 Route::get('/', [IntroductionController::class,"introductionView"]);
 
@@ -34,10 +40,15 @@ Route::get('/login', [LoginController::class,"loginView"])->middleware(OnlyForGu
 Route::post('/login', [LoginController::class,"loginProcess"])
 
 ;});
+
+Route::middleware(([EmailRegister::class]))->group(function(){
+
 Route::middleware([OnlyForUsers::class])->group(function(){
 Route::get('/profile', [ProfileController::class,"profile"]);
 Route::get('/logout', [LogoutController::class,"getlogout"]);
 Route::post('/logout', [LogoutController::class,"logout"]);
+
+;})
 ;});
 
 ;});
