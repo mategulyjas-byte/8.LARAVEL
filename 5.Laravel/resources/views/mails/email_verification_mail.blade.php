@@ -5,7 +5,12 @@ Kedves {{$name}} te vagy valaki más {{now()}} kor ezzel az email címell regisz
 Ha te voltál akkor kattint saz alábbi gombra a regisztráció megerősítéséhez
 
 
-<x-mail::button :url="'http://localhost:8000/emailRegister/'.$token">
+
+
+
+
+
+<x-mail::button :url="url('/emailRegister/'.$token)">
 Button Text
 </x-mail::button>
 

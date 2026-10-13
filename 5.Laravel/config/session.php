@@ -34,11 +34,8 @@ return [
 
     'lifetime' => (int) env('SESSION_LIFETIME', 120),
 
-
-
     // TRUE ra módostttam a falsot
 
-    
     'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', true),
 
     /*

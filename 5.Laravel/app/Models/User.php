@@ -30,8 +30,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-
-protected $guarded=[];
+    protected $guarded = [];
 
     protected $hidden = [
         'password',
@@ -51,10 +50,10 @@ protected $guarded=[];
         ];
     }
 
-//mutátor
+    // mutátor
 
-// function setPasswordAttribute($pasw){
-//     $this->attributes["password"]=password_hash($pasw ,PASSWORD_DEFAULT);
-// }
+    // function setPasswordAttribute($pasw){
+    //     $this->attributes["password"]=password_hash($pasw ,PASSWORD_DEFAULT);
+    // }
 
 }

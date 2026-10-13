@@ -195,6 +195,6 @@ return [
     |
     */
 
-    'attributes' => [ "name"=> "A név", "email"=> "Az e-mail", "password"=>"A jelszó" ],
+    'attributes' => ['name' => 'A név', 'email' => 'Az e-mail', 'password' => 'A jelszó'],
 
 ];

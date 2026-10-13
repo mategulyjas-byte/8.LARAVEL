@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
@@ -13,15 +12,18 @@ use Illuminate\Queue\SerializesModels;
 class EmailVerificationMail extends Mailable
 {
     use Queueable, SerializesModels;
-public $name, $token;
+
+    public $name;
+
+    public $token;
+
     /**
-     * 
      * Create a new message instance.
      */
-    public function __construct($name,$token)
+    public function __construct($name, $token)
     {
-        $this->name=$name;
-        $this->token=$token;
+        $this->name = $name;
+        $this->token = $token;
     }
 
     /**
@@ -30,7 +32,7 @@ public $name, $token;
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: __("New registration"),
+            subject: __('New registration'),
         );
     }
 
@@ -40,7 +42,7 @@ public $name, $token;
     public function content(): Content
     {
         return new Content(
-            markdown: 'mails.email_verification_mail', 
+            markdown: 'mails.email_verification_mail',
         );
     }
 

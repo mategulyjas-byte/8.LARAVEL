@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
-
+use Symfony\Component\HttpFoundation\Response;
 
 class OnlyForUsers
 {
@@ -17,9 +16,10 @@ class OnlyForUsers
      */
     public function handle(Request $request, Closure $next): Response
     {
-         if (!Auth::check()) {
-            return  redirect()->to("/login")->with("error",__("Log in first"))
-        ; }
+        if (! Auth::check()) {
+            return redirect()->to('/login')->with('error', __('Log in first'));
+        }
+
         return $next($request);
     }
 }
