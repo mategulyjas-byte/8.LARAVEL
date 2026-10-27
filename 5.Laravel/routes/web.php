@@ -30,13 +30,13 @@ Route::middleware([SetLanguage::class])->group(function () {
             Route::post('/login', [LoginController::class, 'loginProcess']);
         });
 
-       // Route::middleware(([EmailRegister::class]))->group(function () {
+        // Route::middleware(([EmailRegister::class]))->group(function () {
 
-            Route::middleware([OnlyForUsers::class])->group(function () {
-                Route::get('/profile', [ProfileController::class, 'profile']);
-                Route::get('/logout', [LogoutController::class, 'getlogout']);
-                Route::post('/logout', [LogoutController::class, 'logout']);
- //});
+        Route::middleware([OnlyForUsers::class])->group(function () {
+            Route::get('/profile', [ProfileController::class, 'profile']);
+            Route::get('/logout', [LogoutController::class, 'getlogout']);
+            Route::post('/logout', [LogoutController::class, 'logout']);
+            // });
         });
 
     });

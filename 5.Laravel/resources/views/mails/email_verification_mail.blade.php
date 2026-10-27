@@ -6,10 +6,6 @@ Ha te voltál akkor kattint saz alábbi gombra a regisztráció megerősítésé
 
 
 
-
-
-
-
 <x-mail::button :url="url('/emailRegister/'.$token)">
 Button Text
 </x-mail::button>

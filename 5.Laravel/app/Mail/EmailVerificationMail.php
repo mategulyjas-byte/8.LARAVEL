@@ -20,7 +20,8 @@ class EmailVerificationMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($name, $token)
+    public function __construct($name, $token)    
+     //class meghívásakokor autómtiksuan lefut
     {
         $this->name = $name;
         $this->token = $token;
