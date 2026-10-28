@@ -69,6 +69,27 @@ dump($list2)
 <br> <br>
  
 
+@php
+
+
+   dump(date('Y-m-d H:i:s'));
+
+   $dtime = date("Y-m-d H:i:s");
+
+$timeminus = date("Y-m-d H:i:s", strtotime("-1 hour"))
+
+@endphp
+
+{{$dtime}}
+<br>
+{{$timeminus}}
+
+<br>
+{{ "neve:".$name}}
+<br>
+{{"Életkora {$age} év"}}
+<br>
+
 
 
 </body>
