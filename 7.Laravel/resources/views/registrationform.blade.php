@@ -12,12 +12,18 @@
 
 
 
-<form action="" method="">
+<form action="" method="POST">
 
-@csrf
 
 <label for="name"></label>
 <input type="text" name="name" id="name"  placeholder="Add meg a neved"  value="{{old ("name")}}">
+
+@error('name')
+<div>{{$message}}</div>
+    
+@enderror
+
+<input type="hidden"  name="_token"  value="{{csrf_token()}}">
 
 <button> Küldés</button>
 
