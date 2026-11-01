@@ -48,3 +48,7 @@ Route::get('/unset', function (Request $request) {
 Route::get('/register1', [GuestController::class, 'registerview']);
 
 Route::post('/register1', [GuestController::class, 'registerprocess']);
+
+
+
+
