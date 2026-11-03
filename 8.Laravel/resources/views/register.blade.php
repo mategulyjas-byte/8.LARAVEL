@@ -11,6 +11,11 @@
     
 <h2>{{__("Registration")}}</h1>
 <br>
+
+@if (session()->has("success"))
+    <div>{{session("success")}}</div>
+@endif
+<br>
 <form action="" method="post">
 @csrf
 
@@ -18,7 +23,7 @@
 <br>
 <input type="text" name="name" id="" placeholder="{{__("John Doe")}}" value="{{old("name")}}">
 @error('name')
-    <div>{{$messgae}}</div>
+    <div>{{$message}}</div>
 @enderror
 <br>
 

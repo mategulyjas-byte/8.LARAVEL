@@ -24,7 +24,11 @@ class RegisterController extends Controller
     )
 ;
 User::create($validated)
-   ; }
+   ;
+
+return redirect()->back()->with( "success",__("Successful registration"));
+   
+   }
 
 }
 
