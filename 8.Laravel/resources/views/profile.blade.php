@@ -17,5 +17,11 @@
       <br>
       {{__("Your email adress: ").Auth::user()->email}}
    
+
+
+<button><a href="/logout">{{__("Logout")}}</a></button>
+
+
+
 </body>
 </html>

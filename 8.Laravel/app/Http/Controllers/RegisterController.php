@@ -7,28 +7,25 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    function register (){
+    public function register()
+    {
 
-    $title= __("Registration");
+        $title = __('Registration');
 
-    return view("register", compact("title"));
+        return view('register', compact('title'));
     }
 
+    public function registerprocess(Request $request)
+    {
 
-    function registerprocess(Request $request){
+        $validated = $request->validate(
+            ['name' => 'required|min:1|max:50',
+                'email' => 'required|email|',
+                'password' => 'required|min:1|max:50|confirmed']
+        );
+        User::create($validated);
 
-    $validated=$request->validate(
-    [ "name"=>"required|min:1|max:50",
-    "email"=> "required|email|",
-    "password"=>"required|min:1|max:50|confirmed" ]
-    )
-;
-User::create($validated)
-   ;
+        return redirect()->back()->with('success', __('Successful registration'));
 
-return redirect()->back()->with( "success",__("Successful registration"));
-   
-   }
-
+    }
 }
-

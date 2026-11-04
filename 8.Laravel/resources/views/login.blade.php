@@ -11,17 +11,39 @@
 
 <h2>{{__("Login form")}}</h2>
 
+
+
+@if (session()->has("error"))
+<div>{{session()->get("error")}}</div>
+    
+@endif
+
 <form action="" method="POST">
 @csrf
-<input type="email" name="email" id="" value="{{old("email")}}">
+<label for="email">{{__("Give your email adress")}}</label>
+<br>
+<input type="email" name="email" id="email" value="{{old("email")}}">
 
-
+<br>
+<label for="password">{{__("Give your password")}}</label>
+<br>
 <input type="password" name="password">
-
+<br>
+<input type="checkbox" name="remember_" >
+<br>
+<label for="">{{__("Remember me")}}</label>
+<br>
 <button>{{__("Login")}}</button>
 
 </form>
 
+
+<br>
+
+<button><a href="/">{{__("Go to Welcome page")}}</a></button>
+<br>
+<br>
+<button><a href="/registration">{{__("Go to registration page")}}</a></button>
 
 
 

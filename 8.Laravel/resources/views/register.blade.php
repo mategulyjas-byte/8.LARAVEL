@@ -55,5 +55,16 @@
 
 
 
+
+
+<br>
+
+<button><a href="/">{{__("Go to Welcome page")}}</a></button>
+<br>
+<br>
+<button><a href="/login">{{__("Go to login page")}}</a></button>
+
+
+
 </body>
 </html>
