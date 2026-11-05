@@ -17,11 +17,9 @@ class OnlyforuseresMiddlewre
     public function handle(Request $request, Closure $next): Response
     {
 
-
-if(!Auth::check()){
-    return redirect()->to("/login")->with("error",__("Enter first!"));
-}
-
+        if (! Auth::check()) {
+            return redirect()->to('/login')->with('error', __('Enter first!'));
+        }
 
         return $next($request);
     }

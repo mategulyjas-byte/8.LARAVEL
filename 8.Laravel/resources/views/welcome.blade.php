@@ -9,7 +9,7 @@
 <body>
     
 
-<h1>{{__("Registration interface and database entry point")}}</h1>
+<h1>{{__("Shoe Store")}}</h1>
 
 
 
@@ -17,6 +17,10 @@
 
 
 
+
+<a href="/hu"> magyar</a>
+
+<a href="/en">english</a>
 
 
 </body>

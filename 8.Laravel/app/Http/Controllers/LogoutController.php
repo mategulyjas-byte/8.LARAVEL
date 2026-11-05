@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
 {
-    function logout(){
+    public function logout()
+    {
 
-    Auth::logout();
-    return redirect()->to("/login")->with("sucess", __("Successful logout"));
+        Auth::logout();
+
+        return redirect()->to('/login')->with('sucess', __('Successful logout'));
     }
 }
