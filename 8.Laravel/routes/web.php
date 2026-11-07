@@ -11,30 +11,28 @@ use App\Http\Middleware\OnlyforuseresMiddlewre;
 use App\Http\Middleware\SetlanguageMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get("/{lange}", [SetLanguageController::class, ("language")])->where("lange", "hu|en");
+Route::get('/emailRegister/{token}', [RegisterController::class, ('emailRegister')]);
 
+Route::get('/{lange}', [SetLanguageController::class, ('language')])->where('lange', 'hu|en');
 
+Route::middleware([SetlanguageMiddleware::class])->group(function () {
+    Route::get('/', [WelcomeController::class, ('welcome')]
+    );
 
+    Route::middleware([OnlyforGuestsMiddleware::class])->group(function () {
 
-Route::middleware([SetlanguageMiddleware::class])->group(function(){
-Route::get('/', [WelcomeController::class, ('welcome')]
-);
+        Route::get('/registration', [RegisterController::class, ('register')]);
 
+        Route::post('/registration', [RegisterController::class, ('registerprocess')]);
 
-Route::middleware([OnlyforGuestsMiddleware::class])->group(function(){
+        Route::get('/login', [LoginController::class, ('login')]);
 
-Route::get('/registration', [RegisterController::class, ('register')]);
+        Route::post('/login', [LoginController::class,  ('loginProcess')]);
 
-Route::post('/registration', [RegisterController::class, ('registerprocess')]);
+    });
 
-Route::get('/login', [LoginController::class, ('login')]);
+    Route::get('/profile', [ProfileController::class, ('profile')])->middleware([OnlyforuseresMiddlewre::class]);
 
-Route::post('/login', [LoginController::class,  ('loginProcess')]);
-
-});
-
-Route::get('/profile', [ProfileController::class, ('profile')])->middleware([OnlyforuseresMiddlewre::class]);
-
-Route::get("/logout", [LogoutController::class, ("logout")]) ;
+    Route::get('/logout', [LogoutController::class, ('logout')]);
 
 });

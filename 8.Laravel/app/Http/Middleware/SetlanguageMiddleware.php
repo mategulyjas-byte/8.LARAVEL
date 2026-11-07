@@ -17,10 +17,9 @@ class SetlanguageMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-
-
-    if(session()->has("langkey")){
-        Config::set('app.locale', session()->get('langkey'));}
+        if (session()->has('langkey')) {
+            Config::set('app.locale', session()->get('langkey'));
+        }
 
         return $next($request);
     }

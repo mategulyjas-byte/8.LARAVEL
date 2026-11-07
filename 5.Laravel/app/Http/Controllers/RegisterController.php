@@ -39,7 +39,7 @@ class RegisterController extends Controller
     // user megkeresem a User táblában ahol(a verifcazion_token egyenlő az érkezett tokennel)
         if (!$user)  // ha mincs user akkor 403 hibát dobok
             abort(403);
-        if($user->email_verified_et)   //ha verifikálva volt már az email akkor 422 hibát dobok
+        if($user->email_verified_at)   //ha verifikálva volt már az email akkor 422 hibát dobok
             abort(422);
         $user->update(["email_verified_at" =>now(),  //egyébként updatelem a mostni időpontra az emailverified-ot
         "verification_token"=> Str::random(64) //  Vverification tokent is felülírom
