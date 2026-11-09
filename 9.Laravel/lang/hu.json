@@ -1,0 +1,19 @@
+{
+
+   "Welcome": "Kezdőoldal", 
+   "About": "Rólunk",
+   "Registration": "Regisztráció",
+   "Login":"Belépés a fiókomba",
+   "Give your name": "Add meg a neved",
+   "John Doe": "Minta Péter",
+   "Give your email adress": "Add meg az e-mail címed",
+   "exaple@exaple.hu": "pelda@pelda.hu",
+   "Give your password":"Add meg a jelszavad",
+   "Confrimed your password":"Erősítsd meg a jelszavad",
+   "Send":"küldés",
+   "Registration successful! To log in, open the confirmation email sent to your email account and click the confirmation button.": "Sikeres regisztráció! Ahhoz hogy beléphess, az email fiókodba érkezett, jóváhagyó emailt nyist meg és kattint a jóváhagyás gombra.",
+   "Registration failed! Correct the provided details and try again!":"Sikertelen regisztráció! Javítsa ki a megadott adatokat és próbálkozzon újra!"
+
+
+
+}
