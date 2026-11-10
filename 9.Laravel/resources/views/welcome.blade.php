@@ -30,5 +30,17 @@ Neque magni accusamus optio suscipit sapiente quidem officiis voluptas voluptate
 <a href="/hu">{{__("Hungary")}}</a>
 <a href="/en">{{__("English")}}</a>
 
+
+
+<h3>{{__("Reviews about us")}}</h3>
+
+
+@foreach ($comments as $comment)
+    
+<li>{{$comment->id. "- " .$comment->body}}</li> <hr>
+
+    
+@endforeach
+
 </body>
 </html>

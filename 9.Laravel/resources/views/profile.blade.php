@@ -13,7 +13,7 @@
 
 <br>
 
-<a href="/login">{{__("Logout")}}</a>
+<a href="/logout">{{__("Logout")}}</a>
 
 </body>
 </html>

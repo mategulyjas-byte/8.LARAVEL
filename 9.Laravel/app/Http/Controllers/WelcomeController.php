@@ -8,6 +8,13 @@ class WelcomeController extends Controller
     {
         $title = __('Welcome');
 
-        return view('welcome', compact('title'));
+
+        $comments= json_decode(file_get_contents("https://jsonplaceholder.typicode.com/comments"));
+
+
+
+
+
+        return view('welcome', compact('title',"comments"));
     }
 }

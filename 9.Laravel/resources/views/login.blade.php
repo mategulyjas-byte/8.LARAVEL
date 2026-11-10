@@ -17,9 +17,6 @@
       
   @endif
 
-
-
-
 <br>
     <form action="" method="POST">
         @csrf
