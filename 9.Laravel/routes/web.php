@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ChangingdataController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginContorller;
 use App\Http\Controllers\LogoutController;
@@ -34,7 +35,15 @@ Route::get('/login', [LoginContorller::class, ('login')]);
 Route::post('/login', [LoginContorller::class, ('loginProcess')]);
 
 Route::middleware([LoginMiddleware::class])->group(function(){
-Route::get('/profile', [ProfileController::class, ('profile')]);});
+Route::get('/profile', [ProfileController::class, ('profile')]);
+
+
+Route::get('/changingdata', [ChangingdataController::class, ('changingdataView')]);
+
+Route::post('/changingdata', [ChangingdataController::class, ('changingdataProcess')]);
+
+
+});
 
 Route::get("/logout", [LogoutController::class, ("logout")]);
 

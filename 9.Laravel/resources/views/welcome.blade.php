@@ -26,6 +26,9 @@ Neque magni accusamus optio suscipit sapiente quidem officiis voluptas voluptate
 <a href="/about">{{__("About")}}</a>
 <a href="/register">{{__("Registration")}}</a>
 <a href="/login">{{__("Login")}}</a>
+<a href="/changingdata">{{__("Changing data")}}</a>
+
+
 
 <a href="/hu">{{__("Hungary")}}</a>
 <a href="/en">{{__("English")}}</a>

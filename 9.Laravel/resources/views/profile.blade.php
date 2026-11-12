@@ -9,11 +9,20 @@
 <body>
     
 
+@if (Session::has("success"))
+<div>{{Session::get("success")}}</div>
+    
+@endif
+
+
 {{Auth::user()->name}}
 
 <br>
 
 <a href="/logout">{{__("Logout")}}</a>
+
+<a href="/changingdata">{{__("Changing data")}}</a>
+
 
 </body>
 </html>
