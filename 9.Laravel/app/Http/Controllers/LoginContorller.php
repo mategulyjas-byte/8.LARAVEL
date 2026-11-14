@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 
 class LoginContorller extends Controller
 {
@@ -18,17 +18,16 @@ class LoginContorller extends Controller
     public function loginProcess(Request $request)
     {
 
-    $guest= User::where("email", $request->email)->wherenotNull("email_verified_at")->first();
+        $guest = User::where('email', $request->email)->wherenotNull('email_verified_at')->first();
 
-    if($guest){
+        if ($guest) {
 
-       $user= Auth::attempt(['email' => $request->email, 'password' => $request->password]);
-    
-      if($user){  
-       return redirect()->to('/profile');}}
-        
-        
-        else {
+            $user = Auth::attempt(['email' => $request->email, 'password' => $request->password]);
+
+            if ($user) {
+                return redirect()->to('/profile');
+            }
+        } else {
             return redirect()->back();
         }
     }

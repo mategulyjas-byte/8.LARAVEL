@@ -8,30 +8,30 @@ use Illuminate\Validation\Rule;
 
 class ChangingdataController extends Controller
 {
-    function changingdataView(){
+    public function changingdataView()
+    {
 
-    $title=__("Changin data");
+        $title = __('Changin data');
 
-    return view("changingdata", compact("title"));
-    
+        return view('changingdata', compact('title'));
+
     }
 
+    public function changingdataProcess(Request $request)
+    {
 
+        $validated = $request->validate([
 
-    function changingdataProcess(Request $request){
+            'name' => 'required|min:1|max:50',
 
-   $validated= $request->validate([
+            'email' => ['required', 'email', Rule::unique('users')->ignore(Auth::id())],
 
-        "name"=>"required|min:1|max:50",
+        ]);
 
-        "email"=>["required","email",Rule::unique("users")->ignore(Auth::id())],
-        
-    ]);
+        if ($validated) {
+            Auth::user()->update($validated);
 
-if($validated){
-    Auth::user()->update($validated);
-
-    return redirect()->to("/profile")->with("success",__("Your details have been successfully updated!"))
-;}
+            return redirect()->to('/profile')->with('success', __('Your details have been successfully updated!'));
+        }
     }
 }

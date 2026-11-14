@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
-
+use Symfony\Component\HttpFoundation\Response;
 
 class LoginMiddleware
 {
@@ -18,8 +17,10 @@ class LoginMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
+        if (! Auth::user()) {
+            return redirect()->to('/login');
+        }
 
-    if(!Auth::user()){return redirect()->to("/login");}
         return $next($request);
     }
 }
