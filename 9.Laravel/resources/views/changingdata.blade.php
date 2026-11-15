@@ -19,7 +19,7 @@
 
  <form action="" method="POST">
         @csrf
-        <label for="name">{{__("Give your name")}}</label>
+        <label for="name">{{__("Give your new name")}}</label>
         <br>
         <input type="text" name="name" id="name" placeholder="{{__("John Doe")}}"  value="{{old("name") ?? Auth::user()->name}}">
         <br>
@@ -28,7 +28,7 @@
         @enderror
 
         <br>
-        <label for="name">{{__("Give your email adress")}}</label>
+        <label for="name">{{__("Give your new email adress")}}</label>
         <br>
         <input type="email" name="email" id="email" placeholder="exaple@exaple.hu" value="{{old("email") ?? Auth::user()->email}}">
         <br>
@@ -36,6 +36,16 @@
         <div>{{$message}}</div>    
         @enderror
 
+
+         <br>
+        <label for="password">{{__("Give your new password")}}</label>
+        <br>
+        <input type="password" name="password" id="password">
+        <br>
+
+        @error('password')
+        <div>{{$message}}</div>    
+        @enderror
       
         <button>{{__("Changing")}}</button>
     </form>

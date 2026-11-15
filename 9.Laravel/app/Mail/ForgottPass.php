@@ -16,18 +16,21 @@ class ForgottPass extends Mailable
     /**
      * Create a new message instance.
      */
-    public $name;
+    // public $name;
+    public $password_token;
 
-    public $newpass;
+    // public $newpass;
 
-    public $email;
+    // public $email;
 
-    public function __construct($name, $email, $newpass)
+    public function __construct($password_token)
     {
-        $this->name = $name;
-        $this->newpass = $newpass;
-        $this->email= $email
-    ;}
+        // $this->name = $name;
+        $this->password_token = $password_token;
+
+        // $this->newpass = $newpass;
+        // $this->email= $email
+    }
 
     /**
      * Get the message envelope.

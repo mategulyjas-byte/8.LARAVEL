@@ -7,21 +7,27 @@
     <title>{{$title}}</title>
 </head>
 <body>
-    
+
+<h2>{{__("Profile")}}</h2>
+
 
 @if (Session::has("success"))
 <div>{{Session::get("success")}}</div>
     
 @endif
 
+<h3>{{__("My data:")}}</h3>
 
-{{Auth::user()->name}}
+
+<li>{{__("Name: ").Auth::user()->name}}</li>
+<li>{{__("Email: ").Auth::user()->email}}</li>
 
 <br>
 
-<a href="/logout">{{__("Logout")}}</a>
-
-<a href="/changingdata">{{__("Changing data")}}</a>
+<button><a href="/logout">{{__("Logout")}}</a></button>
+<br>
+<br>
+<button><a href="/changingdata">{{__("Changing data")}}</a></button>
 
 
 </body>

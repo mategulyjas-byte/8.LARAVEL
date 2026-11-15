@@ -5,49 +5,82 @@ namespace App\Http\Controllers;
 use App\Mail\ForgottPass;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-
-
+use Illuminate\Support\Str;
 
 class ForgottPassController extends Controller
 {
-    
+    public function forgottPassView()
+    {
 
-function forgottPassView(){
+        $title = __('Forgot password');
 
-$title=__("Forgot password");
+        return view('forgottpass', compact('title'));
+    }
 
-return view("forgottpass", compact("title"));}
+    public function forgottPass(Request $request)
+    {
 
+        $forgottuser = User::where('email', $request->email)->first();
 
-function forgottPassSend(Request $request){
+        if ($forgottuser) {
+            $forgottuser->password_token = Str::random(50);
+            $forgottuser->save();
 
- $forgettuser= User::where("email",$request->email)->first();
+            Mail::to($forgottuser->email)->send(new ForgottPass($forgottuser->password_token, $forgottuser->name));
+            return redirect()->to("/forgottpass");
+        }
+    }
 
- if($forgettuser){
+    public function forgottPassVerified($password_token)
+    {
+                $activuser = User::where('password_token', $password_token)->first();
 
- $newpass= $forgettuser->password= Str::random(1);
+        if ($activuser) {
+            Auth::login($activuser);
+            $activuser->password_token = Str::random(20);
+            $activuser->save();
 
- //$forgettuser->save();
+            return redirect()->to('newpass');
 
- Mail::to($forgettuser->email)->send(new ForgottPass($forgettuser->name, $forgettuser->email, $newpass));
-
- }
-
+        }
+        else{return redirect()->to("/");}
+    }
 }
 
+// function forgottPassView(){
 
-function forgottPassProcess($newpass, $email){
+// $title=__("Forgot password");
 
-$activuser=User::where("email",$email)->first();
+// return view("forgottpass", compact("title"));}
 
-if($activuser){
-    $activuser->password = $newpass;
+// function forgottPassSend(Request $request){
 
-    $activuser->save();
-}
+//  $forgettuser= User::where("email",$request->email)->first();
 
-}
+//  if($forgettuser){
 
-}
+//  $newpass= $forgettuser->password= Str::random(1);
+
+//  //$forgettuser->save();
+
+//  Mail::to($forgettuser->email)->send(new ForgottPass($forgettuser->name, $forgettuser->email, $newpass));
+
+//  }
+
+// }
+
+// function forgottPassProcess($newpass, $email){
+
+// $activuser=User::where("email",$email)->first();
+
+// if($activuser){
+//     $activuser->password = $newpass;
+
+//     $activuser->save();
+// }
+
+// }
+
+// }

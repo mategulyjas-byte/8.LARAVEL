@@ -11,31 +11,46 @@
 
 </head>
 <body>
-    {{__("Welcome")}}
+   <h1>{{__("Hungarian Christmas candy fair")}}</h1>
+   <br> 
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita repudiandae sit vitae tempora amet maxime rerum, beatae dolorum consequuntur optio dignissimos laudantium maiores adipisci. Est dolorem nesciunt quae praesentium.
-Distinctio fuga nulla delectus perspiciatis adipisci earum, numquam molestias autem minus voluptatum dignissimos commodi a accusantium excepturi reiciendis itaque ut similique omnis ea neque dolore, vel eaque ipsa. Architecto, recusandae?
-Accusamus modi quae dolor itaque consectetur rem maiores illo. Sequi qui officiis ipsum praesentium vitae perspiciatis natus vero ipsa, assumenda dolor voluptatibus porro reprehenderit. Nostrum ratione quasi et ipsa neque?
-Auas alias ullam magnam iusto beatae facere voluptas aliquid suscipit eum rerum dicta repellat, asperiores voluptate minima incidunt deleniti dignissimos ab molestias aliquam impedit. Quas voluptatem commodi debitis nam!
-Neque magni accusamus optio suscipit sapiente quidem officiis voluptas voluptatem consectetur quas velit reiciendis libero aliquid accusantium voluptatibus ipsa laborum odio mollitia recusandae quibusdam aliquam, labore illo? A, aspernatur facere.</p>
+<button><a href="/hu">{{__("Hungary")}}</a></button>
+<br>
+<button><a href="/en">{{__("English")}}</a></button>
+<br>
+<br>
+<button><a href="/dark">{{__("Dark mode")}}</a></button>
+<br>
+<button><a href="light">{{__("Light mode")}}</a></button>
 
-<a href="/about">{{__("About")}}</a>
-<a href="/register">{{__("Registration")}}</a>
-<a href="/login">{{__("Login")}}</a>
-<a href="/changingdata">{{__("Changing data")}}</a>
+<br>
 
-<a href="/hu">{{__("Hungary")}}</a>
-<a href="/en">{{__("English")}}</a>
+   <h2>{{__("Welcome")}}</h2> 
 
-<a href="/dark">{{__("Dark mode")}}</a>
-<a href="light">{{__("Light mode")}}</a>
+    <br>
 
-
-<h3>{{__("Reviews about us")}}</h3>
+   <h3>{{__("The Essential Jewel of Christmas: Premium Hungarian Szaloncukor in One Place")}}</h3>
+   <br>
+<p>
+{{__("The Essential Jewel of Christmas: Premium Hungarian Szaloncukor in One Place Szaloncukor is the sweetest symbol of Hungarian Christmas traditions, decorating Christmas trees and bringing magic to festive moments for over a  century. Alongside classic, nostalgic flavors, our selection features award-winning specialties from the finest local artisan workshops, crafted with real Belgian chocolate and premium ingredients. Browse our delicacies for your holiday table or as a thoughtful gift, and make this Christmas truly unforgettable!")}}
+</p>
 
 
 
+<button><a href="/about">{{__("About")}}</a></button>
+<br>
+<br>
+<button><a href="/register">{{__("Registration")}}</a></button>
+<br>
+<br>
+<button><a href="/login">{{__("Login")}}</a></button>
 
+
+
+<br><br><br>
+<hr>
+
+<h4>{{__("Reviews about us")}}</h4>
 
 
 @foreach ($comments as $comment)

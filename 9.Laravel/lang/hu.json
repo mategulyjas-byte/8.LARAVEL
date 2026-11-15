@@ -1,9 +1,20 @@
 {
 
+   "Hungarian Christmas candy fair":"Szaloncukor vásár",
+
+   "The Essential Jewel of Christmas: Premium Hungarian Szaloncukor in One Place":"A karácsony elmaradhatatlan ékköve: prémium magyar szaloncukrok egy helyen",
+   "The Essential Jewel of Christmas: Premium Hungarian Szaloncukor in One Place Szaloncukor is the sweetest symbol of Hungarian Christmas traditions, decorating Christmas trees and bringing magic to festive moments for over a  century. Alongside classic, nostalgic flavors, our selection features award-winning specialties from the finest local artisan workshops, crafted with real Belgian chocolate and premium ingredients. Browse our delicacies for your holiday table or as a thoughtful gift, and make this Christmas truly unforgettable!": "A szaloncukor a magyar karácsonyi hagyományok legédesebb szimbóluma, amely több mint száz éve díszíti a fenyőfákat és teszi varázslatossá az ünnepi pillanatokat. Kínálatunkban a klasszikus, nosztalgikus ízek mellett a legkiválóbb hazai kézműves manufaktúrák díjnyertes, valódi belga csokoládéból és prémium alapanyagokból készült különlegességeit is megtalálod. Válogass kedvedre az ünnepi asztalra vagy ajándékba szánt finomságok közül, és tedd felejthetetlenné az idei karácsonyt!", 
+
    "Welcome": "Kezdőoldal", 
    "About": "Rólunk",
-   "Registration": "Regisztráció",
+
+
+"Our company was founded with the mission to bring the sweetest symbol of Hungarian Christmas traditions, szaloncukor, directly into your home. Alongside classic, nostalgic flavors, our selection features award-winning specialties from the finest local artisan workshops, crafted with real Belgian chocolate and premium ingredients. For us, szaloncukor is more than just a sweet treat; it is an essential part of holiday preparations and cherished family moments. Browse our delicacies and make this Christmas truly unforgettable!":"Cégünk azzal a céllal jött létre, hogy elhozza otthonába a magyar karácsonyi hagyományok legédesebb szimbólumát, a szaloncukrot. Kínálatunkban a klasszikus, nosztalgikus ízek mellett a legjobb hazai kézműves műhelyek valódi belga csokoládéval és prémium alapanyagokkal készült, díjnyertes különlegességei is megtalálhatók. Számunkra a szaloncukor nem csupán édesség, hanem az ünnepi készülődés és a közös családi pillanatok elengedhetetlen része. Válogasson kedvére finomságaink közül, és tegye igazán felejthetetlenné az idei karácsonyt!",
+ "Forgot password":"Elfelejtett jelszó",  
+"Registration": "Regisztráció",
+"exaple@exaple.com":"pelda@pelda.hu",
    "Login":"Belépés a fiókomba",
+   "Reviews about us":"Rólunk írták",
    "Give your name": "Add meg a neved",
    "John Doe": "Minta Péter",
    "Give your email adress": "Add meg az e-mail címed",
@@ -11,6 +22,20 @@
    "Give your password":"Add meg a jelszavad",
    "Confrimed your password":"Erősítsd meg a jelszavad",
    "Send":"küldés",
+  "Profile":"Profilom",
+  "My data:":"Adataim:",
+  "Name: ":"Név: ",
+  "Email: ":"E-mail: ",
+  "Give your new name": "Add meg az új nevedet",
+  "Give your new email adress":"Add meg az új e-mail címed",
+  "Give your new password":"Add meg az új jelszavadat",
+  "Changing":"Megváltoztatás",
+  "Changing data": "Adatmódosítás",
+  "Logout":"Kilépés",
+  "Request a new password":"Új jelszó igénylése",
+"Setting the new password":"Az új jelszó beállítása",
+"New password":"Új jelszó",
+
    "Registration successful! To log in, open the confirmation email sent to your email account and click the confirmation button.": "Sikeres regisztráció! Ahhoz hogy beléphess, az email fiókodba érkezett, jóváhagyó emailt nyist meg és kattint a jóváhagyás gombra.",
    "Registration failed! Correct the provided details and try again!":"Sikertelen regisztráció! Javítsa ki a megadott adatokat és próbálkozzon újra!"
 

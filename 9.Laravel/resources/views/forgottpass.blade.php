@@ -21,6 +21,19 @@
 
 <button> {{__("Send")}}</button>
 </form>
+<br>
+<button><a href="/about">{{__("About")}}</a></button>
+<br>
+<br>
+<button><a href="/welcome">{{__("Welcome")}}</a></button>
+<br>
+<br>
+<button><a href="/register">{{__("Registration")}}</a></button>
+<br>
+<br>
+<button><a href="/login">{{__("Login")}}</a></button>
+
+    
 
 
 </body>

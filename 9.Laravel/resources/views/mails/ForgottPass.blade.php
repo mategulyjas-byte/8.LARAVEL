@@ -3,10 +3,13 @@
 
 The body of your message.
 
-{{$newpass}}
+{{-- {{$newpass}} --}}
 
 
-<x-mail::button :url="url('/forgottpass/'.$newpass.'/'.$email)">
+<x-mail::button :url="url('/forgottpass/'.$password_token)">
+
+
+{{-- <x-mail::button :url="url('/forgottpass/'.$newpass.'/'.$email)"> --}}
 Button Text
 
 

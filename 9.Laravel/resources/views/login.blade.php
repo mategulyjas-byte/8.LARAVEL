@@ -21,7 +21,9 @@
     <form action="" method="POST">
         @csrf
      
-        <input type="email" name="email" id="email" placeholder="exaple@exaple.hu" value="{{old("email")}}">
+        <label for="email">{{__("Give your email adress")}}</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="{{__("exaple@exaple.com")}}" value="{{old("email")}}">
         <br>
         @error('email')
         <div>{{$message}}</div>    
@@ -39,7 +41,21 @@
        
         <button>{{__("Send")}}</button>
     </form>
+    <br>
+<button><a href="/forgottpass">{{__("Forgot password")}}</a></button>
 
+    <br>
+    <br>
+<button><a href="/about">{{__("About")}}</a></button>
+<br>
+<br>
+<button><a href="/welcome">{{__("Welcome")}}</a></button>
+<br>
+<br>
+<button><a href="/register">{{__("Registration")}}</a></button>
+
+
+    
 
 </body>
 </html>

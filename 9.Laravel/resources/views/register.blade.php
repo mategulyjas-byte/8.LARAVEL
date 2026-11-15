@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}}</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
 
 
 
@@ -13,7 +14,7 @@
 </head>
 <body>
     
-  <h2> {{__("Registration")}} </h2> 
+  <h2>{{__("Registration")}} </h2> 
 
 
   @if (Session::has("success")){
@@ -34,7 +35,7 @@
         <br>
         <label for="name">{{__("Give your email adress")}}</label>
         <br>
-        <input type="email" name="email" id="email" placeholder="exaple@exaple.hu" value="{{old("email")}}">
+        <input type="email" name="email" id="email" placeholder="{{__("exaple@exaple.com")}}" value="{{old("email")}}">
         <br>
         @error('email')
         <div>{{$message}}</div>    
@@ -53,8 +54,20 @@
         <br>
         <input type="password" name="password_confirmation" id="password_confrimation">
         <br>
+        <br>
         <button>{{__("Send")}}</button>
     </form>
+
+<br>
+<br>
+<button><a href="/about">{{__("About")}}</a></button>
+<br>
+<br>
+<button><a href="/welcome">{{__("Welcome")}}</a></button>
+<br>
+<br>
+<button><a href="/login">{{__("Login")}}</a></button>
+
 
 
 </body>
