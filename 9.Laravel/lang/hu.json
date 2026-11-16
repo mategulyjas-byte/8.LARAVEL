@@ -36,9 +36,11 @@
 "Setting the new password":"Az új jelszó beállítása",
 "New password":"Új jelszó",
 
-   "Registration successful! To log in, open the confirmation email sent to your email account and click the confirmation button.": "Sikeres regisztráció! Ahhoz hogy beléphess, az email fiókodba érkezett, jóváhagyó emailt nyist meg és kattint a jóváhagyás gombra.",
-   "Registration failed! Correct the provided details and try again!":"Sikertelen regisztráció! Javítsa ki a megadott adatokat és próbálkozzon újra!"
-
+   "Registration successful! To log in, open the confirmation email sent to your email account and click the confirmation button.": "Sikeres regisztráció! Ahhoz hogy beléphess, az email fiókodba érkezett jóváhagyó emailt nyisd meg, és kattint a jóváhagyás gombra.",
+   
+   "Your details have been successfully updated!":"Az adatokat sikerese módostottad",
+   "Registration failed! Correct the provided details and try again!":"Sikertelen regisztráció! Javítsa ki a megadott adatokat és próbálkozzon újra!",
+"To access your account, open your email inbox, click the button in the email you received, enter your new password, and you will be able to log in to your account.":"A fiókba való belépéshez lépjen be az email fiókjába és beérkezett emilben lévő gombra kattintva adja meg új jelszavát és máris beléphet a fiókjába"
 
 
 }

@@ -16,7 +16,6 @@
     
   <h2>{{__("Registration")}} </h2> 
 
-
   @if (Session::has("success")){
     <div>{{session("success")}}</div>
   }
@@ -30,7 +29,7 @@
         <input type="text" name="name" id="name" placeholder="{{__("John Doe")}}"  value="{{old("name")}}">
         <br>
         @error('name')
-        <div>{{$messege}}</div>       
+        <div>{{$message}}</div>       
         @enderror
         <br>
         <label for="name">{{__("Give your email adress")}}</label>
