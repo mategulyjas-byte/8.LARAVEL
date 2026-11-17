@@ -39,7 +39,7 @@ class ForgottPassController extends Controller
 
         if ($activuser) {
             Auth::login($activuser);
-            $activuser->password_token = Str::random(20);
+            $activuser->password_token = Str::random(50);
             $activuser->save();
 
             return redirect()->to('newpass');

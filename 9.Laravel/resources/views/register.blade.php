@@ -16,9 +16,9 @@
     
   <h2>{{__("Registration")}} </h2> 
 
-  @if (Session::has("success")){
+  @if (Session::has("success"))
     <div>{{session("success")}}</div>
-  }
+  
       
   @endif
 <br>

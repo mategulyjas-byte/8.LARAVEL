@@ -64,7 +64,7 @@ class RegisterController extends Controller
         // }
 
         else {
-            $user->update(['email_verified_at' => now(), 'verified_token' => Str::random(20)]);
+            $user->update(['email_verified_at' => now(), 'verified_token' => Str::random(10)]);
         }
 
         return redirect()->to('/login');

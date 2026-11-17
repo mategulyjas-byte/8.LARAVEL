@@ -30,6 +30,10 @@
 <br>
 <button><a href="/changingdata">{{__("Changing data")}}</a></button>
 
+<br>
+<br>
+<button><a href="/delete">{{__("Delete my profile")}}</a></button>
+
 
 </body>
 </html>

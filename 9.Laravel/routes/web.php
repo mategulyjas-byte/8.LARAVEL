@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ChangingdataController;
+use App\Http\Controllers\DeleteProfileController;
 use App\Http\Controllers\ForgottPassController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginContorller;
@@ -54,8 +55,10 @@ Route::middleware([LaguageMiddlevare::class])->group(function () {
         Route::get('/changingdata', [ChangingdataController::class, ('changingdataView')]);
 
         Route::post('/changingdata', [ChangingdataController::class, ('changingdataProcess')]);
+        
+        Route::get("/delete", [DeleteProfileController::class, ("deleteProfile")]);
 
-    });
+   } );
 
     Route::get('/logout', [LogoutController::class, ('logout')]);
 
