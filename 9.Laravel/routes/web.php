@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CandyController;
 use App\Http\Controllers\ChangingdataController;
 use App\Http\Controllers\DeleteProfileController;
 use App\Http\Controllers\ForgottPassController;
@@ -57,6 +58,9 @@ Route::middleware([LaguageMiddlevare::class])->group(function () {
         Route::post('/changingdata', [ChangingdataController::class, ('changingdataProcess')]);
         
         Route::get("/delete", [DeleteProfileController::class, ("deleteProfile")]);
+
+
+        Route::resource("/candy", CandyController::class);
 
    } );
 

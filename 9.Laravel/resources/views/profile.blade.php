@@ -29,6 +29,9 @@
 <br>
 <br>
 <button><a href="/changingdata">{{__("Changing data")}}</a></button>
+<br>
+<br>
+<button><a href="/candy/create">{{__("Candies")}}</a></button>
 
 <br>
 <br>
