@@ -8,6 +8,9 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
 
+
+</head>
+<body>
 <br>
 
 <h2>{{__("Candies")}}</h2>
@@ -53,8 +56,13 @@
 <button>{{__("Send")}}</button>
 </form>
 
-</head>
-<body>
-    
+<br>
+
+
+<button><a href="/profile">{{__("Profile")}}</a></button>
+ <br>
+ <br>
+ <button><a href="/candy">{{__("Candies")}}</a></button>
+   
 </body>
 </html>

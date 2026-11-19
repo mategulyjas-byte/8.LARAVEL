@@ -12,7 +12,13 @@ class CandyController extends Controller
      */
     public function index()
     {
-        //
+        $title=__("Candy list");
+
+        $candies=Candy::all();
+
+    return view("Candies.candyall", compact("title", "candies"));
+
+        
     }
 
     /**
@@ -22,7 +28,7 @@ class CandyController extends Controller
 
     {$title=__("candies");
 
-        return view("Candies.candy", compact("title") );
+        return view("Candies.candycreate", compact("title") );
     }
 
     /**
@@ -46,7 +52,11 @@ class CandyController extends Controller
      */
     public function show(Candy $candy)
     {
-        //
+        $title=__("Candy propertys");
+
+        return view("Candies.candyshow", compact("title", "candy"));
+
+
     }
 
     /**

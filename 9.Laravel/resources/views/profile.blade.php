@@ -31,8 +31,8 @@
 <button><a href="/changingdata">{{__("Changing data")}}</a></button>
 <br>
 <br>
-<button><a href="/candy/create">{{__("Candies")}}</a></button>
-
+<button><a href="/candy/create">{{__("Candy create")}}</a></button>
+<button><a href="/candy">{{__("Candies ")}}</a></button>
 <br>
 <br>
 <button><a href="/delete">{{__("Delete my profile")}}</a></button>
