@@ -64,7 +64,8 @@ class CandyController extends Controller
      */
     public function edit(Candy $candy)
     {
-        //
+        $title=__("Candy edit");
+        return view("Candies.candyedit", compact("title", "candy"));
     }
 
     /**
@@ -72,7 +73,18 @@ class CandyController extends Controller
      */
     public function update(Request $request, Candy $candy)
     {
-        //
+       $validated= $request->validate(
+    ["name"=>"required|min:1|max:80",
+    "taste"=>"required|in:chocolate,fruits",
+    "diet"=>"required|in:lactosfree,vegan"]
+        );
+
+        $candy->update($validated);
+
+        return redirect()->back();
+
+
+        
     }
 
     /**
@@ -80,6 +92,9 @@ class CandyController extends Controller
      */
     public function destroy(Candy $candy)
     {
-        //
+        $candy->delete();
+
+        return redirect()->to("/candy");
+
     }
 }

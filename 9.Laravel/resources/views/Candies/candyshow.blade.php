@@ -12,10 +12,27 @@
 </head>
 <body>
 
- <h3>{{$candy->name}}</h3>   
+ <h3>{{$candy->name}}</h3> 
+
 
 <li>{{$candy->taste}}</li>
+ 
+
 <li>{{$candy->diet}}</li>
+
+
+<a href="/candy/{{$candy->id}}/edit"> {{__("Candy edit")}} </a> 
+
+<form action="{{route('candy.destroy' , $candy)}}"  method="POST">
+@csrf
+    @method("delete")
+
+<button>{{__("Delete")}}</button>
+
+</form>
+
+
+
 
 </body>
 </html>

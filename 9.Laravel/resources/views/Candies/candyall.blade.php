@@ -15,7 +15,15 @@
 @foreach ($candies as $candy)
 
 <li>{{__("Name").":". $candy->name }}     <button><a href="/candy/{{$candy->id}}">{{__("Candy show")}}</a></button>   </li>
+<br>
 
+<form action="{{route('candy.destroy' , $candy)}}"  method="POST">
+@csrf
+    @method("delete")
+
+<button>{{__("Delete")}}</button>
+
+</form>
 
 
 <br>
