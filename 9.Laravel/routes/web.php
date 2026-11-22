@@ -56,13 +56,12 @@ Route::middleware([LaguageMiddlevare::class])->group(function () {
         Route::get('/changingdata', [ChangingdataController::class, ('changingdataView')]);
 
         Route::post('/changingdata', [ChangingdataController::class, ('changingdataProcess')]);
-        
-        Route::get("/delete", [DeleteProfileController::class, ("deleteProfile")]);
 
+        Route::get('/delete', [DeleteProfileController::class, ('deleteProfile')]);
 
-        Route::resource("/candy", CandyController::class);
+        Route::resource('/candy', CandyController::class);
 
-   } );
+    });
 
     Route::get('/logout', [LogoutController::class, ('logout')]);
 

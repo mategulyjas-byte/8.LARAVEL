@@ -18,9 +18,9 @@ class CandyFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->randomElement(['Gummy Bear','Sour Worm','Lollipop','Chocolate Truffle','Caramel Chew','Mint Drop','Marshmallow','Licorice Twist']),
-            'taste'=> fake()->randomElement(["choclate", "fruit"]),
-            'diet' => fake()->randomElement(["lactosfree", "vegan"])   
+            'name' => fake()->randomElement(['Gummy Bear', 'Sour Worm', 'Lollipop', 'Chocolate Truffle', 'Caramel Chew', 'Mint Drop', 'Marshmallow', 'Licorice Twist']),
+            'taste' => fake()->randomElement(['choclate', 'fruit']),
+            'diet' => fake()->randomElement(['lactosfree', 'vegan']),
         ];
     }
 }

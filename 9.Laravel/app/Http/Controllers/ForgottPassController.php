@@ -29,13 +29,14 @@ class ForgottPassController extends Controller
             $forgottuser->save();
 
             Mail::to($forgottuser->email)->send(new ForgottPass($forgottuser->password_token, $forgottuser->name));
-            return redirect()->to("/login")->With("success",__("To access your account, open your email inbox, click the button in the email you received, enter your new password, and you will be able to log in to your account."));
+
+            return redirect()->to('/login')->With('success', __('To access your account, open your email inbox, click the button in the email you received, enter your new password, and you will be able to log in to your account.'));
         }
     }
 
     public function forgottPassVerified($password_token)
     {
-                $activuser = User::where('password_token', $password_token)->first();
+        $activuser = User::where('password_token', $password_token)->first();
 
         if ($activuser) {
             Auth::login($activuser);
@@ -44,8 +45,9 @@ class ForgottPassController extends Controller
 
             return redirect()->to('newpass');
 
+        } else {
+            return redirect()->to('/');
         }
-        else{return redirect()->to("/");}
     }
 }
 

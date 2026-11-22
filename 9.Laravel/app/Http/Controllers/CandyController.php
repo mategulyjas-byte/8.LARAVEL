@@ -12,23 +12,22 @@ class CandyController extends Controller
      */
     public function index()
     {
-        $title=__("Candy list");
+        $title = __('Candy list');
 
-        $candies=Candy::all();
+        $candies = Candy::all();
 
-    return view("Candies.candyall", compact("title", "candies"));
+        return view('Candies.candyall', compact('title', 'candies'));
 
-        
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
+    {
+        $title = __('candies');
 
-    {$title=__("candies");
-
-        return view("Candies.candycreate", compact("title") );
+        return view('Candies.candycreate', compact('title'));
     }
 
     /**
@@ -36,26 +35,24 @@ class CandyController extends Controller
      */
     public function store(Request $request)
     {
-        $validated=$request->validate(
-    ["name"=>"required|min:1|max:80",
-    "taste"=>"required|in:chocolate,fruits",
-    "diet"=>"required|in:lactosfree,vegan"]);
+        $validated = $request->validate(
+            ['name' => 'required|min:1|max:80',
+                'taste' => 'required|in:chocolate,fruits',
+                'diet' => 'required|in:lactosfree,vegan']);
 
-    if ($validated) {
-    Candy::create($validated);}
-    ;}
-
-
+        if ($validated) {
+            Candy::create($validated);
+        }
+    }
 
     /**
      * Display the specified resource.
      */
     public function show(Candy $candy)
     {
-        $title=__("Candy propertys");
+        $title = __('Candy propertys');
 
-        return view("Candies.candyshow", compact("title", "candy"));
-
+        return view('Candies.candyshow', compact('title', 'candy'));
 
     }
 
@@ -64,8 +61,9 @@ class CandyController extends Controller
      */
     public function edit(Candy $candy)
     {
-        $title=__("Candy edit");
-        return view("Candies.candyedit", compact("title", "candy"));
+        $title = __('Candy edit');
+
+        return view('Candies.candyedit', compact('title', 'candy'));
     }
 
     /**
@@ -73,18 +71,16 @@ class CandyController extends Controller
      */
     public function update(Request $request, Candy $candy)
     {
-       $validated= $request->validate(
-    ["name"=>"required|min:1|max:80",
-    "taste"=>"required|in:chocolate,fruits",
-    "diet"=>"required|in:lactosfree,vegan"]
+        $validated = $request->validate(
+            ['name' => 'required|min:1|max:80',
+                'taste' => 'required|in:chocolate,fruits',
+                'diet' => 'required|in:lactosfree,vegan']
         );
 
         $candy->update($validated);
 
         return redirect()->back();
 
-
-        
     }
 
     /**
@@ -94,7 +90,7 @@ class CandyController extends Controller
     {
         $candy->delete();
 
-        return redirect()->to("/candy");
+        return redirect()->to('/candy');
 
     }
 }

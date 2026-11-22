@@ -8,17 +8,15 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-
 Artisan::command('delete-old-registrations', function () {
 
-foreach (User::whereNull("email_verified_at")->get() as $user){
+    foreach (User::whereNull('email_verified_at')->get() as $user) {
 
-    $mindate=date("Y-m-d H:i:s" , strtotime("-40 sec"));
+        $mindate = date('Y-m-d H:i:s', strtotime('-40 sec'));
 
-    if($user->created_at < $mindate){
-        $user->delete();
-    }}
+        if ($user->created_at < $mindate) {
+            $user->delete();
+        }
+    }
 
 });
-
-

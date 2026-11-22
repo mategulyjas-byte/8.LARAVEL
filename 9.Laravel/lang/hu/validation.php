@@ -197,9 +197,9 @@ return [
 
     'attributes' => [
 
-    "name"=> "A név",
-    "email"=> "Az e-mail",
-    "password"=>"A jelszó"
+        'name' => 'A név',
+        'email' => 'Az e-mail',
+        'password' => 'A jelszó',
     ],
 
 ];

@@ -10,7 +10,7 @@ class NewPassController extends Controller
     public function newPassView()
     {
 
-        $title = __("New password");
+        $title = __('New password');
 
         return view('newpass', compact('title'));
     }
