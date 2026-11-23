@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CandyController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChangingdataController;
 use App\Http\Controllers\DeleteProfileController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\ForgottPassController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginContorller;
@@ -60,6 +62,11 @@ Route::middleware([LaguageMiddlevare::class])->group(function () {
         Route::get('/delete', [DeleteProfileController::class, ('deleteProfile')]);
 
         Route::resource('/candy', CandyController::class);
+
+        Route::resource("/Category", CategoryController::class);
+
+        Route::resource("/Foods", FoodController::class);
+
 
     });
 

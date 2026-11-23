@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            // $table->string('password_token')->nullable();
-            // $table->timestamp('password_verified_at')->nullable();
+            $table->string('password_token')->nullable();
+            $table->timestamp('password_verified_at')->nullable();
 
         });
     }
