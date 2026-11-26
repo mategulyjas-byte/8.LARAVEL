@@ -1,0 +1,12 @@
+#logo1{max-width: 200px; border-radius: 100%;}
+
+.mainaside { display: flex;
+    flex-direction: row !important;
+}
+
+main { width: 50%;}
+
+aside { width: 20%;}
+
+
+

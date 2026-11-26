@@ -18,21 +18,74 @@
 <body>
     
 <header>
-<img src="{{asset("logo.png")}}" alt="">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+             <img  id="logo1" src="{{asset("logo.png")}}" alt="">
+
+  <div class="container-fluid">
+
+
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </header>
 
+<div class="mainaside">
+
+
+    <aside>
+
+<ul>
+1. Lelki egyensúly és belső erőforrások
+</ul>
+<ul>
+2. Munkahelyi jóllét és megelőzés
+</ul>
+<ul>
+3. Kapcsolatok és támogatás
+</ul>
+
+<ul>
+4. Pozitív érzelmek és szemlélet
+</ul>
+
+    </aside>
 <main>
 
 @yield('content1')
-
 </main>
 
-<aside>
 
-</aside>
+</div>
+
+
 
 <footer>
 
+                       <div>Támogatás a lelki egyensúlyért és a tudatos mindennapokért.</div> 
+                       <div>  Mészáros Angéla munkahelyi mentálhigiénés szakember </div>
+                       <div> Kapcsolat: <ul>mamental@gmail.com</ul>
+                                        <ul> Telefon: 7+367777777</ul>
+                        </div>
 </footer>
 
 
